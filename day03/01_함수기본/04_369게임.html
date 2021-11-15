@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>369게임</title>
+    <script>
+        function ThreeSixNine() {
+
+            for (let i = 1; i <=100; i++) {
+
+                // 십의자리
+                // parsenInt() 함수를 사용해서 정수로 변환
+                let ten = parseInt( i / 10 ); 
+                let one = i % 10;
+
+                let isTen369 = ten == 3 || ten == 6 || ten == 9;
+                let isOne369 = one == 3 || one == 6 || one == 9;
+                
+                // 십의자리 일의자리 모두 3,6,9 이면
+                if( isTen369 == true && isOne369 == true ){
+                    console.log('**');
+                }
+                // 십의자리 일의자리 둘 중 하나만 3,6,9 이면 
+                else if ( isTen369 == true || isOne369 == true ){
+                    console.log('*');
+                }
+
+                // 그 외
+                else {
+                    console.log(i + '\n');
+                }
+            }
+
+        }
+        //함수 호출
+        ThreeSixNine();
+
+    </script>
+</head>
+<body>
+    <!-- 십의자리, 일의자리확인
+    console.log('십의자리 : ' + ten);
+    console.log('일의자리 : ' + one); -->
+
+</body>
+</html>

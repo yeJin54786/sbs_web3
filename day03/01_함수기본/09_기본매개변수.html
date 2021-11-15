@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>기본매개변수</title>
+    <script>
+
+        function pay( name, pay=9160, hours=40) {
+            console.log(`${name} 님의 급여`);
+            console.log(`시급 : ${pay} 원`);
+            console.log(`시간 : 주  ${hours} 시간`);
+            console.log(`급여 : ${pay * hours * 4} 원`);
+        }
+
+        pay('로봇오타찾기')
+        pay('로봇오타찾기', 5000)
+        pay('로봇오타찾기', 5000, 100)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
