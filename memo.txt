@@ -48,3 +48,9 @@ for( let i = 0 ; i < 반복횟수 ; i++ )
 
 
 
+명명 규칙
+
+케밥케이스 ex)font-size
+카멜케이스 fontSize
+파스칼 케이스 Hello World
+스네이크 케이스 hello_world
