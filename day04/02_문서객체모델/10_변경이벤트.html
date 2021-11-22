@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변경 이벤트</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const select = document.querySelector('select')
+            const p = document.querySelector('p')
+            
+            select.addEventListener('change', (event) => {
+                const option = event.currentTarget.options
+                const index = event.currentTarget.options.selectedIndex
+
+                p.textContent =  `선택 : ${options[index].textContent}`
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>선택: </p>
+    <select>
+        <option value="1">샤브샤브</option>
+        <option value="2">스시</option>
+        <option value="3">육회</option>
+        <option value="4">보쌈</option>
+    </select>
+</body>
+</html>
