@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 추가</title>
+
+    <script>
+        /*
+            노드 추가
+            1. 자식 노드 마지막에 요소 추가 : 부모노드.appendChild(새 노드)
+            2. 특정 노드 앞에 요소 추가 : 부모노드.insertBefore(새 노드, 기준 노드)
+            3. 특정 노드에 데이터 추가  : 노드.insertData( 위치, 새 데이터 )
+        */
+
+        let count1 = 0;
+
+
+        // 요소 추가(마지막)
+        function addLast() {
+            const ul = document.getElementById('list')
+            const newLi = document.createElement('li')
+            const text = document.createTextNode('새로운 항목' + ++count1)
+            newLi.appendChild(text)
+            ul.appendChild(newLi)
+        }
+        
+        // 요소 추가(요소 앞)
+        function addBefore() {
+            const ul = document.getElementById('list')
+            const crtLi = document.getElementById('criteria')
+            const newLi = document.createElement('li')
+            const text = document.createTextNode('새로운 항목' + ++count1)
+            newLi.appendChild(text)
+            // 특정 노드 앞에 요소를 추가
+            // 부모노드.insertBefore( 새 노드, 기준 노드 )
+            ul.insertBefore(newLi, criteria)
+        }
+        
+        // 요소 추가(마지막))
+        function addData() {
+            const crtLi = document.getElementById('criteria').firstChild
+            // 기준^노드 (5) 
+            // 노드.insertDate( 위치, 새로운 데이터 )
+            crtLi.insertData(5, '(데이터 변경)')
+
+        }
+
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li id="criteria">기준 노드</li>
+    </ul>
+    <div class="btn-box">
+        <button class="btn1" onclick="addLast()">요소 추가(마지막)</button>
+        <button class="btn2" onclick="addBefore()">요소 추가(요소 앞)</button>
+        <button class="btn3" onclick="addData()">데이터 추가</button>
+    </div>
+</body>
+</html>

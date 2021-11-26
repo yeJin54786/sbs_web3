@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 추가</title>
+    <style>
+        .change {
+            background-color: tomato;
+        }
+    </style>
+    <script>
+
+
+        let count1 = 0;
+
+
+        // 노드 변경
+        function changeNode() {
+            const item1 = document.getElementById('item1')
+            item1.firstChild.nodeValue = '노드 변경!'
+        }
+        
+        // 속성 변경
+        function changeAttribute() {
+            const lists = document.getElementsByTagName('li')
+            for( let  i = 0; i < lists.length ; i++) {
+                lists[i].setAttribute('class', 'change')
+            }
+
+        }
+        
+
+        // 노드 교체
+        function replaceNode() {
+
+            const ul = document.getElementById('list')
+            const item3 = document.getElementById('item3')
+            const item4 = document.getElementById('item4')
+
+            // 노드 교체
+            // 부모 노드.replaceChild( 새 노드, 교체될 노드)
+            ul.replaceChild(item4, item3)
+        }
+
+
+        // 속성 교체
+        function replaceAttribute() {
+            const item2 = document.getElementById('item2').firstChild
+            
+            // 노드.replaceData(위치, 교체할 문자 수, 새 데이터)
+            item2.replaceData(4, 1, '100')
+}
+
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li id="item1">아이템 1</li>
+        <li id="item2">아이템 2</li>
+        <li id="item3">아이템 3</li>
+        <li id="item4">아이템 4</li>
+    </ul>
+    <div class="btn-box">
+        <button class="btn1" onclick="changeNode()">노드 변경</button>
+        <button class="btn2" onclick="changeAttribute()">속성 변경</button>
+        <button class="btn3" onclick="replaceNode()">노드 교체</button>
+        <button class="btn4" onclick="replaceAttribute()">데이터 교체</button>
+    </div>
+</body>
+</html>
