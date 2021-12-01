@@ -17,6 +17,9 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
     position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0  auto;
 }
 
 
@@ -37,10 +40,10 @@ img {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
+    transform: translateY(-50%);
     color: white;
     font-weight: bold;
     font-size: 20px;

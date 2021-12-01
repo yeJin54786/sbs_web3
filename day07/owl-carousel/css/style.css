@@ -1,0 +1,57 @@
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 슬라이드 화살표 */
+.owl-nav {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    width: 100%;
+    text-align: initial;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    
+}
+
+.owl-nav button.owl-prev {
+    margin-left: 20px;
+}
+
+.owl-nav button.owl-next {
+    margin-right: 20px;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    color: initial;
+}
+
+
+/* dots */
+.owl-dots {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.owl-dots .owl-dot {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: darkgray !important;
+    border-radius: 50%;
+}
+
+
+.owl-dots .owl-dot.active {
+    background-color: #fff !important;
+}
+
